@@ -1,0 +1,68 @@
+@import 'colors/darkmode.css';
+@import 'colors/lightmode.css';
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    /*transition: var(--color-transition);*/
+}
+
+body {
+    margin: 0px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: var(--color-transition);
+}
+
+.no-transition *,
+.no-transition *::before,
+.no-transition *::after {
+    transition: none !important;
+}
+
+.text-link {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.text-link:hover {
+    text-decoration: underline;
+}
+
+.text-link:visited {
+    color: var(--link-color);
+}
+
+.subtitle {
+    margin-top: 0;
+    font-size: large;
+    font-weight: lighter;
+    margin-block-end: 20px;
+}
+
+h1:has(+ .subtitle) {
+    margin-block-end: 0;
+}
+
+.subtitle.more-space {
+    margin-top: 10px;
+}
+
+.spacer {
+    height: 50px;
+}
+
+.spacer.half {
+    height: 25px;
+}
+
+
+
+/*
+ * Move Font Awesome icons up a bit to look good with text
+ */
+
+.icon-align {
+    transform: translateY(-8%);
+}

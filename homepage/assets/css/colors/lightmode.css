@@ -1,0 +1,35 @@
+body.lightmode {
+    --bg-color: #ffffff;
+    --text-color: #2a2a2a;
+
+    --link-color: #0000e4;
+
+    /* Top bar */
+    --top-bar-bg-color: #e4e4e4;
+    --top-bar-hover-color: #d4d4d4;
+    --top-bar-text-color: #444444;
+    --hamburger-icon-color: #333333;
+    --sun-icon-color: #FFB817;
+
+    /* Side bar */
+    --side-bar-bg-color: #d4d4d4;
+    --side-bar-hover-color: #c4c4c4;
+    --side-bar-text-color: #666666;
+
+    /* User menu */
+    --user-menu-bg-color: var(--side-bar-bg-color);
+    --user-menu-hover-color: var(--side-bar-hover-color);
+    --user-menu-text-color: var(--side-bar-text-color);
+
+    /* File collection */
+    --file-collection-bg-color: #f0f0f0;
+    --file-collection-hover-color: #e0e0e0;
+    --file-collection-border-color: #cccccc;
+    --file_collection-text-color: var(--text-color);
+
+    /* Account form */
+    --account-form-bg-color: var(--file-collection-bg-color);
+    --account-form-hover-color: var(--file-collection-hover-color);
+    --account-form-border-color: var(--file-collection-border-color);
+    --account-form-text-color: var(--file-collection-text-color);
+}

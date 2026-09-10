@@ -1,0 +1,95 @@
+.file-collection {
+    display: flex;
+    flex-direction: column;
+
+    width: fit-content;
+    max-width: 500px;
+    padding: 10px;
+    border-radius: 20px;
+
+    background-color: var(--file-collection-bg-color);
+    color: var(--file-collection-text-color);
+
+    row-gap: 5px;
+}
+
+.file-collection:not(:has(> *)) {
+    display: none;
+}
+
+.file-collection > * {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: var(--file-collection-border-color);
+}
+
+.file-collection > form {
+    padding: 10px;
+}
+
+.file {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    min-width: 0;
+
+    overflow: hidden;
+}
+
+.file > form {
+    border-radius: 9px;
+}
+
+.file > form:not(.file-download) {
+    flex: 0 0 auto;
+}
+
+.file-download {
+    display: flex;
+    flex: 1;
+    min-width: 0;
+}
+
+.file > form > button {
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+
+    padding: 10px;
+
+    border: 0;
+    border-radius: inherit;
+
+    background: transparent;
+    color: inherit;
+    font: inherit;
+
+    cursor: pointer;
+}
+
+.file > form > button:not(.file-download-button) {
+    justify-content: center;
+}
+
+.file-download-button {
+    gap: 5px;
+    text-align: left;
+}
+
+.file > form > button:hover {
+    background: var(--file-collection-hover-color);
+}
+
+.file-download-button > i {
+    flex: 0 0 auto;
+}
+
+.file-name {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

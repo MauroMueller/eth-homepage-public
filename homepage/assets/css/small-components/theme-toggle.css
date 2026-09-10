@@ -1,0 +1,87 @@
+/**
+ * Theme toggle (sun-moon animation)
+ */
+
+/* Label for the toggle */
+.theme-toggle {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Sun/moon (yellow circle, sometimes crescent) */
+.theme-toggle > .sun {
+    position: absolute;
+    /* Idea: 
+     * Circle should be cut out of a 28px by 28px square at top: 0 left: 0, but
+     * because the mask-image attribute results in a nasty border at the edge
+     * of the underlying element, we double the size of it so the mask-image
+     * never overlaps with it. */
+    top: -14px; left: -14px;
+    width: 56px;
+    height: 56px;
+    background: var(--sun-icon-color);
+    transition:
+        var(--color-transition),
+        transform 0.5s ease,
+        mask-position 0.5s ease;
+    
+    /* Cut off the circle for the sun (first mask-image), subtract the inner
+     * circle for the crescent */
+    mask-image:
+        radial-gradient(circle at center, 
+            black 0, black 34%, transparent 35%, transparent 100%),
+        radial-gradient(circle at 65% 38%, 
+            black 0, black 30.5%, transparent 31.5%, transparent 100%);
+    mask-composite: subtract;
+
+    --webkit-mask-image:
+        radial-gradient(circle at center, 
+            black 0, black 34%, transparent 35%, transparent 100%),
+        radial-gradient(circle at 65% 38%, 
+            black 0, black 30.5%, transparent 31.5%, transparent 100%);
+    --webkit-mask-composite: xor;
+}
+
+/* Rays of the sun */
+.theme-toggle > .rays > span {
+    --scale: 0;
+    --angle: calc((360deg / 8) * (var(--i)));
+    --start-radius: 8px;
+    --ray-width: 2px;
+    position: absolute;
+    /* Put the top center of the ray in the dead center of the sun */
+    top: 50%; left: calc(50% - var(--ray-width) / 2);
+    width: var(--ray-width);
+    height: 6px;
+    border-radius: calc(var(--ray-width) / 2);
+    background: var(--sun-icon-color);
+    transform-origin: top center;
+    transform:
+        rotate(var(--angle))
+        translateY(var(--start-radius))
+        scale(var(--scale));
+    transition: var(--color-transition), transform 0.5s ease;
+}
+
+.theme-toggle > .rays > span:nth-child(1) { --i: 0; }
+.theme-toggle > .rays > span:nth-child(2) { --i: 1; }
+.theme-toggle > .rays > span:nth-child(3) { --i: 2; }
+.theme-toggle > .rays > span:nth-child(4) { --i: 3; }
+.theme-toggle > .rays > span:nth-child(5) { --i: 4; }
+.theme-toggle > .rays > span:nth-child(6) { --i: 5; }
+.theme-toggle > .rays > span:nth-child(7) { --i: 6; }
+.theme-toggle > .rays > span:nth-child(8) { --i: 7; }
+
+/* Sun gets smaller, crescent mask moves away */
+.theme-toggle > input:checked + .sun {
+    transform: scale(0.4);
+    mask-position: 0 0, 20px -10px;
+}
+
+/* The rays pop out */
+.theme-toggle > input:checked ~ .rays > span {
+    --scale: 1;
+}

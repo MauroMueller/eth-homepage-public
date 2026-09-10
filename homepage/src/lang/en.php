@@ -1,0 +1,173 @@
+<?php
+/**
+ * Language file for English (en).
+ */
+return [
+    'pages' => [
+        '' => [
+            'title' => 'Home',
+            'h1' => 'Mauro\'s Homepage',
+            'p_1' => 'You are probably looking for ',
+            'link' => 'SPCA HS26',
+            'p_2' => '.',
+        ],
+        'account' => [
+            'title' => 'Account',
+            'h1' => 'Account',
+            'subtitle_no_user' => 'Not Signed In',
+            'login_button' => 'Login',
+            'register_button' => 'Register',
+            'preferences_button' => 'Preferences',
+            'logout_button' => 'Logout',
+
+            'login' => [
+                'title' => 'Login',
+                'h1' => 'Login',
+                'identifier' => 'Username/Email',
+                'password' => 'Password',
+                'form_button' => 'Login',
+                'reset_pw_button' => 'Forgot Password?',
+            ],
+            'preferences' => [
+                'title' => 'Preferences',
+                'h1' => 'Preferences',
+                'subtitle_preferences' => 'Preferences',
+                'language' => 'Language',
+                'de' => 'German',
+                'en' => 'English',
+                'timezone' => 'Timezone',
+                'locale' => 'Locale',
+                'form_button_session' => 'Update for this session',
+                'form_button_account' => 'Update for your account and all sessions',
+                'subtitle_account' => 'Account Details',
+                'username' => 'Username',
+                'email' => 'Email',
+                'email_unconfirmed' => 'Email address not confirmed. Click here for a confirmation link.',
+                'email_confirm_wait' => 'Confirmation mail recently requested.',
+                'email_confirmed' => 'Email address confirmed.',
+                'password' => 'Password',
+                'old_password' => 'Old Password',
+                'new_password' => 'New Password',
+                'new_password_confirm' => 'Confirm New Password',
+                'form_button_change' => 'Change',
+                'form_button_cancel' => 'Cancel',
+                'form_button_confirm' => 'Confirm',
+            ],
+            'register' => [
+                'title' => 'Register',
+                'h1' => 'Register',
+                'paragraph' => 'Note that there isn\'t any reason to register for now, maybe there will be some access-restricted function in the future.',
+                'username' => 'Username',
+                'email' => 'Email',
+                'password' => 'Password',
+                'password_confirm' => 'Confirm Password',
+                'form_button' => 'Register',
+            ],
+            'reset-password' => [
+                'title' => 'Reset Password',
+                'h1' => 'Reset Password',
+                'identifier' => 'Username/Email',
+                'form_button' => 'Reset Password',
+            ],
+            'verify' => [
+                'title' => 'Verification',
+                'none' => [
+                    'h1' => 'Verification failed',
+                    'paragraph' => 'Please try again with the same link or generate a new one.',
+                ],
+                'email_verification' => [
+                    'h1' => 'Verify Email Address',
+                    'paragraph' => 'Click the button below to verify your email address.',
+                    'form_button' => 'Verify Email Address',
+                ],
+                'password_reset' => [
+                    'h1' => 'Reset Password',
+                    'paragraph' => 'Fill in the information to complete the password reset.',
+                    'identifier' => 'Username/Email',
+                    'new_password' => 'New Password',
+                    'new_password_confirm' => 'Confirm New Password',
+                    'form_button' => 'Reset Password'
+                ],
+            ],
+        ],
+        'private' => [
+            'toggle-testing' => [
+                'success-public' => 'Toggle successful: The homepage is now set to public.',
+                'success-private' => 'Toggle successful: The homepage is now set to private.',
+                'fail' => 'Toggle failed: File or start of block not found.',
+            ],
+        ],
+        'teaching' => [
+            'title' => 'Teaching',
+            'testcourse' => [
+                'title' => 'Test Course',
+                'week1' =>[
+                    'title' => 'Week 1',
+                ],
+            ],
+        ],
+    ],
+    'components' => [
+        'user-menu' => [
+            'login_button' => 'Login',
+            'register_button' => 'Register',
+            'preferences_button' => 'Preferences',
+            'account_button' => 'Account',
+            'logout_button' => 'Logout',
+        ],
+    ],
+    'breadcrumbs' => [],
+    'sidebar' => [],
+    'validation_messages' => [
+        'required_username'     => 'Username is required.',
+        'required_email'        => 'Email is required.',
+        'required_password'     => 'Password is required.',
+        'required_preference'   => 'At least one preference is required.',
+        'invalid_email'         => 'Email is invalid.',
+        'invalid_user_password' => 'Invalid username/email or password.',
+        'invalid_token'         => 'Token is invalid.',
+        'invalid_usertoken'     => 'Invalid username/email for this token.',
+        'invalid_preference'    => 'Preference identifier is invalid.',
+        'invalidchars_username' => 'Username contains invalid characters.',
+        'tooshort_username_1'   => 'Username must be at least ',
+        'tooshort_username_2'   => ' characters long.',
+        'tooshort_password_1'   => 'Password must be at least ',
+        'tooshort_password_2'   => ' characters long.',
+        'toolong_username_1'    => 'Username must be at most ',
+        'toolong_username_2'    => ' characters long.',
+        'toolong_email_1'       => 'Email must be at most ',
+        'toolong_email_2'       => ' characters long.',
+        'toolong_password_1'    => 'Password must be at most ',
+        'toolong_password_2'    => ' characters long.',
+        'reserved_username'     => 'This username is reserved.',
+        'taken_username'        => 'This username is already taken.',
+        'taken_email'           =>
+            'An account with this email address already exists.',
+        'dontmatch_password'    => 'Passwords don\'t match.',
+        'whitelist_language'    => 'Language is not allowed.',
+        'whitelist_timezone'    => 'Timezone is not allowed.',
+        'whitelist_locale'      => 'Locale is not allowed.',
+        'signedin_state'        => 'You are already signed in.',
+        'notsignedin_state'     => 'You aren\'t signed in.',
+        'alreadyverified_email' => 'Email address is already confirmed.',
+        'recentrequest_email'   => 'Confirmation link recently requested.',
+        'recentrequest_pw'      => 'Reset link recently requested.',
+        'misc_database'         =>
+            'Something weird happened. Maybe you could try again.',
+    ],
+    'mails' => [
+        'email_verification' => [
+            'subject' => 'Confirm Email Address',
+            'body_1' => 'Click the following link to confirm your email address:<br><br>',
+            'link_text' => 'Confirm Email Address',
+            'body_2' => '<br><br>If you didn\'t expect this message, you can ignore it.',
+        ],
+        'password_reset' => [
+            'subject' => 'Reset Password',
+            'body_1' => 'Click the following link to reset your password:<br><br>',
+            'link_text' => 'Reset Password',
+            'body_2' => '<br><br>If you didn\'t expect this message, you can ignore it.',
+        ],
+    ],
+];
+?>

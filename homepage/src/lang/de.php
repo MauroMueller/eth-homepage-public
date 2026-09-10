@@ -1,0 +1,175 @@
+<?php
+/**
+ * Language file for German (de).
+ */
+return [
+    'pages' => [
+        '' => [
+            'title' => 'Startseite',
+            'h1' => 'Mauro\'s Homepage',
+            'p_1' => 'Du bist wahrscheinlich wegen ',
+            'link' => 'SPCA HS26',
+            'p_2' => ' hier.',
+        ],
+        'account' => [
+            'title' => 'Account',
+            'h1' => 'Account',
+            'subtitle_no_user' => 'Nicht Angemeldet',
+            'login_button' => 'Anmelden',
+            'register_button' => 'Registrieren',
+            'preferences_button' => 'Einstellungen',
+            'logout_button' => 'Abmelden',
+
+            'login' => [
+                'title' => 'Anmelden',
+                'h1' => 'Anmelden',
+                'identifier' => 'Benutzername/E-Mail',
+                'password' => 'Passwort',
+                'form_button' => 'Anmelden',
+                'reset_pw_button' => 'Passwort Vergessen?',
+            ],
+            'preferences' => [
+                'title' => 'Einstellungen',
+                'h1' => 'Einstellungen',
+                'subtitle_preferences' => 'Allgemeine Einstellungen',
+                'language' => 'Sprache',
+                'de' => 'Deutsch',
+                'en' => 'Englisch',
+                'timezone' => 'Zeitzone',
+                'locale' => 'Locale',
+                'form_button_session' => 'Für diese Session speichern',
+                'form_button_account' => 'Für deinen Account und alle Sessionen speichern',
+                'subtitle_account' => 'Kontoeinstellungen',
+                'username' => 'Benutzername',
+                'email' => 'E-Mail',
+                'email_unconfirmed' => 'E-Mail-Addresse nicht bestätigt. Klicke für einen Bestätigungslink.',
+                'email_confirm_wait' => 'Bestätigungslink vor kurzem angeforderd.',
+                'email_confirmed' => 'E-Mail-Adresse bestätigt.',
+                'password' => 'Passwort',
+                'old_password' => 'Altes Passwort',
+                'new_password' => 'Neues Passwort',
+                'new_password_confirm' => 'Neues Passwort Bestätigen',
+                'form_button_change' => 'Ändern',
+                'form_button_cancel' => 'Abbrechen',
+                'form_button_confirm' => 'Bestätigen',
+            ],
+            'register' => [
+                'title' => 'Registrieren',
+                'h1' => 'Registrieren',
+                'paragraph' => 'Im Moment macht es keinen Sinn, sich zu registrieren, vielleicht kommt in Zukunft eine Funktion mit Zugriffsbeschränkung.',
+                'username' => 'Benutzername',
+                'email' => 'E-Mail',
+                'password' => 'Passwort',
+                'password_confirm' => 'Passwort Bestätigen',
+                'form_button' => 'Registrieren',
+            ],
+            'reset-password' => [
+                'title' => 'Passwort Zurücksetzen',
+                'h1' => 'Passwort Zurücksetzen',
+                'identifier' => 'Benutzername/E-Mail',
+                'form_button' => 'Passwort Zurücksetzen',
+            ],
+            'verify' => [
+                'title' => 'Bestätigen',
+                'none' => [
+                    'h1' => 'Bestätigen Fehlgeschlagen',
+                    'paragraph' => 'Bitte versuche es erneut mit demselben oder einem neu generierten Link.',
+                ],
+                'email_verification' => [
+                    'h1' => 'E-Mail-Addresse Bestätigen',
+                    'paragraph' => 'Klicke auf den Button, um deine E-Mail-Addresse zu bestätigen.',
+                    'form_button' => 'E-Mail-Addresse Bestätigen',
+                ],
+                'password_reset' => [
+                    'h1' => 'Passwort Zurücksetzen',
+                    'paragraph' => 'Gib die Informationen ein, um die Zurücksetzung abzuschliessen.',
+                    'identifier' => 'Benutzername/E-Mail',
+                    'new_password' => 'Neues Passwort',
+                    'new_password_confirm' => 'Neues Passwort Bestätigen',
+                    'form_button' => 'Password Zurücksetzen',
+                ],
+            ],
+        ],
+        'private' => [
+            'toggle-testing' => [
+                'success-public' => 'Umschalten erfolgreich: Die Homepage ist jetzt öffentlich.',
+                'success-private' => 'Umschalten erfolgreich: Die Homepage ist jetzt privat.',
+                'fail' => 'Umschalten fehlgeschlagen: Datei oder Start des Blockes nicht gefunden.',
+            ],
+        ],
+        'teaching' => [
+            'title' => 'Teaching',
+            'testcourse' => [
+                'title' => 'Testkurs',
+                'week1' =>[
+                    'title' => 'Woche 1',
+                ],
+            ],
+        ],
+    ],
+    'components' => [
+        'user-menu' => [
+            'login_button' => 'Anmelden',
+            'register_button' => 'Registrieren',
+            'preferences_button' => 'Einstellungen',
+            'account_button' => 'Account',
+            'logout_button' => 'Abmelden',
+        ],
+    ],
+    'breadcrumbs' => [],
+    'sidebar' => [],
+    'validation_messages' => [
+        'required_username'     => 'Benutzername ist erforderlich.',
+        'required_email'        => 'E-Mail ist erforderlich.',
+        'required_password'     => 'Passwort ist erforderlich.',
+        'required_preference'   =>
+            'Mindestens eine Einstellung ist erforderlich.',
+        'invalid_email'         => 'E-Mail ist ungültig.',
+        'invalid_user_password' =>
+            'Ungültiger Benutzername/E-Mail oder Passwort',
+        'invalid_token'         => 'Token ist ungültig.',
+        'invalid_usertoken'     => 'Ungültiger Benutzername/E-Mail für dieses Token.',
+        'invalid_preference'    => 'Einstellungs-Identifikator ist ungültig.',
+        'invalidchars_username' => 'Benutzername enthält ungültige Zeichen.',
+        'tooshort_username_1'   => 'Benutzername muss mindestens ',
+        'tooshort_username_2'   => ' Zeichen lang sein.',
+        'tooshort_password_1'   => 'Passwort muss mindestens ',
+        'tooshort_password_2'   => ' Zeichen lang sein.',
+        'toolong_username_1'    => 'Benutzername darf höchstens ',
+        'toolong_username_2'    => ' Zeichen lang sein.',
+        'toolong_email_1'       => 'E-Mail darf höchstes ',
+        'toolong_email_2'       => ' Zeichen lang sein.',
+        'toolong_password_1'    => 'Passwort darf höchstens ',
+        'toolong_password_2'    => ' Zeichen lang sein.',
+        'reserved_username'     => 'Benutzername ist reserviert.',
+        'taken_username'        => 'Benutzername ist bereits vergeben.',
+        'taken_email'           =>
+            'Ein Account mit dieser E-Mail-Adresse existiert bereits.',
+        'dontmatch_password'    => 'Passwörter stimmen nicht überein.',
+        'whitelist_language'    => 'Sprache ist nicht zugelassen.',
+        'whitelist_timezone'    => 'Zeitzone ist nicht zugelassen.',
+        'whitelist_locale'      => 'Locale ist nicht zugelassen.',
+        'signedin_state'        => 'Du bist schon angemeldet.',
+        'notsignedin_state'     => 'Du bist nicht angemeldet.',
+        'alreadyverified_email' => 'E-Mail-Addresse ist bereits bestätigt.',
+        'recentrequest_email'   => 'Bestätigungslink vor kurzem bereits angefordert.',
+        'recentrequest_pw'      => 'Zurücksetzungslink vor kurzem bereits angefordert.',
+        'misc_database'         =>
+            'Da ist etwas seltsames passiert. Bitte versuche es noch einmal.',
+    ],
+    'mails' => [
+        'email_verification' => [
+            'subject' => 'E-Mail-Addresse Bestätigen',
+            'body_1' => 'Klicke auf den folgenden Link, um deine E-Mail-Addresse zu bestätigen:<br><br>',
+            'link_text' => 'E-Mail-Addresse Bestätigen',
+            'body_2' => '<br><br>Wenn du diese Nachricht nicht erwartet hast, kannst du sie ignorieren.',
+        ],
+        'password_reset' => [
+            'subject' => 'Passwort Zurücksetzen',
+            'body_1' => 'Klicke auf den folgenden Link, um dein Passwort zurückzusetzen:<br><br>',
+            'link_text' => 'Passwort Zurücksetzen',
+            'body_2' => '<br><br>Wenn du diese Nachricht nicht erwartet hast, kannst du sie ignorieren.',
+        ],
+    ],
+];
+?>
