@@ -1,0 +1,76 @@
+.sidebar {
+    position: fixed;
+    top: 0; left: 0;
+    height: 100%; width: 250px;
+    transition: var(--color-transition), left 0.5s ease-in-out;
+    z-index: 1001; /* Above top bar */
+    color: var(--side-bar-text-color);
+}
+
+.sidebar.hidden {
+    left: -250px;
+}
+
+.sidebar + .content {
+    margin: 0 10px;
+    transition: var(--color-transition), margin-left 0.5s ease-in-out;
+}
+
+/* Desktop (or wide device) */
+@media (min-width: 750px) {
+    .sidebar + .content {
+        margin-left: 250px;
+    }
+
+    .sidebar.hidden + .content {
+        margin: 0 10px;
+    }
+}
+
+.sidebar-inner {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    inset: 10px;
+    border-radius: 20px;
+    background-color: var(--side-bar-bg-color);
+}
+
+.sidebar-inner > .top {
+    display: flex;
+    align-items: center;
+    height: 72px;
+    margin: 0 10px;
+    padding: 20px 15px;
+    justify-content: space-between;
+}
+
+/* Navigation elements in sidebar */
+.sidebar-nav {
+    margin: 10px;
+    flex: 1;
+    max-height: fit-content;
+    overflow-y: auto;
+}
+
+.sidebar-element {
+    padding-left: 15px;
+}
+
+.sidebar-element-head {
+    height: fit-content;
+}
+
+.sidebar-element-content {
+    display: block;
+
+    color: var(--side-bar-text-color);
+    text-decoration: none;
+    
+    padding: 5px;
+    border-radius: 5px;
+}
+
+a.sidebar-element-content:hover {
+    background-color: var(--side-bar-hover-color);
+}

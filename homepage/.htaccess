@@ -1,0 +1,24 @@
+DirectoryIndex bootstrap.php
+
+SSLRequireSSL
+
+# Disable directory browsing (for directories with no index file)
+Options -Indexes
+
+# Route everything that isn't explicitly whitelisted through bootstrap.php
+RewriteEngine On
+
+# Files that exist and are in public folders
+# Example first line: RewriteCond %{REQUEST_URI} ^/(public_folder|private_folder/with_public_subfolder)/
+RewriteCond %{REQUEST_URI} ^/(assets)/
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# Public files that exist
+# Example first line: RewriteCond %{REQUEST_URI} ^/(public_file\.txt|private_folder/with_public_file\.txt)$
+RewriteCond %{REQUEST_URI} ^/()$
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# Everything else -> route through bootstrap.php
+RewriteRule ^ bootstrap.php [L,QSA]
