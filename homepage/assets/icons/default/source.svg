@@ -1,0 +1,7 @@
+<svg viewBox="0 0 180 180">
+  <defs>
+    <style bx:fonts="Nunito">@import url(https://fonts.googleapis.com/css2?family=Nunito%3Aital%2Cwght%400%2C200..1000%3B1%2C200..1000&amp;display=swap);</style>
+  </defs>
+  <rect style="fill: #9396A0;" width="180" height="180" x="0" y="0" rx="30"/>
+  <text style="fill: #ffffff; font-family: Nunito; font-size: 90; font-weight: 700;" dominant-baseline="central" y="90" x="90" text-anchor="middle">MM</text>
+</svg>

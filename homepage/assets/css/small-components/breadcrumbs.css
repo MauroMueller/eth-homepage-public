@@ -1,0 +1,29 @@
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb-content {
+    color: var(--top-bar-text-color);
+    text-decoration: none;
+    
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.breadcrumb > a:hover {
+    background-color: var(--top-bar-hover-color);
+}
+
+.breadcrumb + .breadcrumb::before {
+    content: "/";
+}
+
+/* If placed in content */
+.content > .breadcrumbs {
+    margin: 10px 0 0 5px;
+}
+
+.content > .breadcrumbs + h1 {
+    margin-top: 10px;
+}
