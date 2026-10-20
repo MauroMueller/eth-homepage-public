@@ -1,0 +1,164 @@
+.poll-collection {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    & > .poll {
+        width: 100%;
+        padding: 10px;
+        border-radius: 20px;
+    
+        background-color: var(--page-overview-bg-color);
+        color: var(--page-overview-text-color);
+    
+        & > .inner {
+            display: flex;
+            flex-direction: column;
+    
+            border-style: solid;
+            border-width: 1px;
+            border-radius: 10px;
+            border-color: var(--page-overview-border-color);
+
+            & > .info {
+                display: flex;
+                justify-content: space-between;
+                align-items: stretch;
+
+                & > .title {
+                    display: flex;
+                    flex: 1;
+                    align-items: center;
+                    padding: 10px;
+
+                    & > span {
+                        font: larger bolder;
+                    }
+                }
+
+                & > .settings {
+                    display: flex;
+
+                    & > form {
+                        & button:not(:disabled) {
+                            cursor: pointer;
+                        }
+
+                        & button:not(:disabled):hover {
+                            background: var(--page-overview-hover-color);
+                        }
+
+                        & button {
+                            display: flex;
+                            align-items: center;
+
+                            height: 100%;
+
+                            padding: 10px;
+
+                            border: 0;
+                            border-radius: 10px;
+
+                            background: transparent;
+                            color: inherit;
+                            font: inherit;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+
+            & > .info.hidden {
+                display: none;
+            }
+    
+            & > .options {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+    
+                & > button {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: row;
+                    gap: 5px;
+    
+                    border: 0;
+                    padding: 0;
+                    border-radius: 10px;
+    
+                    background: transparent;
+                    color: var(--color);
+                    font: inherit;
+                    text-align: left;
+    
+                    & > .bar {
+                        width: var(--relative-votes);
+                        transition: width 300ms ease;
+                        min-width: max-content;
+    
+                        padding: 10px;
+                        border-radius: 10px;
+    
+                        background: var(--bg);
+                    }
+    
+                    & > .bar-overflow {
+                        display: none;
+    
+                        min-width: max-content;
+                        padding: 10px 10px 10px 0;
+    
+                        color: var(--page-overview-text-color);
+                    }
+                }
+    
+                & > button:not(:disabled) {
+                    cursor: pointer;
+                }
+    
+                & > button:not(:disabled):hover > .bar {
+                    background: var(--bg-hover);
+                }
+    
+                & > button.label-outside {
+                    & > .bar > .label {
+                        display: none;
+                    }
+    
+                    & > .bar-overflow {
+                        display: unset;
+                    }
+                }
+    
+                & > button[aria-pressed="true"] > .bar {
+                    outline: 5px solid var(--outline-selected);
+                    outline-offset: -3px;
+                }
+            }
+        }
+    }
+}
+
+@media (width >= 750px) {
+    .poll-collection > .poll > .inner > .options {
+        flex-direction: row;
+
+        & > button {
+            flex: var(--relative-votes);
+            transition: flex 300ms ease;
+
+            & > .bar {
+                width: 100%;
+
+                & > .label.label {
+                    display: unset;
+                }
+            }
+
+            & > .bar-overflow.bar-overflow {
+                display: none;
+            }
+        }
+    }
+}
