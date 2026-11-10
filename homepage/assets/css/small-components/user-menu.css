@@ -1,0 +1,67 @@
+/**
+ * User menu (popup when clicking user icon)
+ */
+
+.topbar-user {
+    position: relative;
+}
+
+.topbar-user-button {
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.topbar-user-button:hover {
+    background-color: var(--top-bar-hover-color);
+}
+
+.topbar-user-button span {
+    line-height: 1;
+}
+
+.topbar-user-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: -15px;
+
+    width: max-content;
+    min-width: 100px;
+    padding: 10px 8px;
+
+    border-radius: 10px;
+    background-color: var(--user-menu-bg-color);
+
+    display: none;
+}
+
+.topbar-user.open .topbar-user-menu {
+    display: block;
+}
+
+.topbar-user-menu-inner {
+    display: flex;	
+    flex-direction: column;
+}
+
+.topbar-user-menu-inner a,
+.topbar-user-menu-inner button {
+    width: 100%;
+    padding: 5px 5px;
+
+    border: 0;
+    border-radius: 5px;
+    background: none;
+
+    font: inherit;
+    color: var(--user-menu-text-color);
+
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.topbar-user-menu-inner a:hover,
+.topbar-user-menu-inner button:hover {
+    background-color: var(--user-menu-hover-color);
+}
