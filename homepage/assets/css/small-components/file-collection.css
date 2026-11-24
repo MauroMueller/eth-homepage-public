@@ -1,0 +1,117 @@
+.file-collection {
+    display: flex;
+    flex-direction: column;
+
+    width: fit-content;
+    max-width: 500px;
+    padding: 10px;
+    border-radius: 20px;
+
+    background-color: var(--file-collection-bg-color);
+    color: var(--file-collection-text-color);
+
+    row-gap: 5px;
+}
+
+.file-collection.minimal {
+    padding: 0;
+}
+
+.file-collection:not(:has(> *)) {
+    display: none;
+}
+
+.file-collection > * {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: var(--file-collection-border-color);
+}
+
+.file-collection > form {
+    padding: 10px;
+}
+
+.file {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    min-width: 0;
+
+    overflow: hidden;
+}
+
+.file > .link,
+.file > form {
+    border-radius: 9px;
+}
+
+.file > form:not(.file-download) {
+    flex: 0 0 auto;
+}
+
+.file > .link,
+.file > .file-download {
+    display: flex;
+    flex: 1;
+    min-width: 0;
+}
+
+.file a,
+.file button {
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+
+    padding: 10px;
+
+    border: 0;
+    border-radius: inherit;
+
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-decoration: none;
+}
+
+.file a:not(:disabled),
+.file button:not(:disabled) {
+    cursor: pointer;
+}
+
+.file button:not(.main-link) {
+    justify-content: center;
+}
+
+.file .main-link {
+    gap: 10px;
+    text-align: left;
+}
+
+.file a:not(:disabled):hover,
+.file button:not(:disabled):hover {
+    background: var(--file-collection-hover-color);
+}
+
+.file .main-link > i {
+    flex: 0 0 auto;
+}
+
+.file-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.file-name {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.file-modified {
+    margin-left: 10px;
+    font-size: smaller;
+}

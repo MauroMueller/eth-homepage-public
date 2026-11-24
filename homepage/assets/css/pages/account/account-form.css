@@ -1,0 +1,156 @@
+/**
+ * Login, register and more account-related forms
+ */
+
+.account-form {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    border-radius: 20px;
+
+    background-color: var(--account-form-bg-color);
+    color: var(--account-form-text-color);
+
+    row-gap: 7px;
+}
+
+.account-form > h3 {
+    margin: 5px;
+    margin-bottom: 10px;
+}
+
+.account-form input,
+.account-form select,
+.account-form a,
+.account-form button {
+    padding: 10px;
+    width: 100%;
+
+    border: 1px solid var(--account-form-border-color);
+    border-radius: 10px;
+
+    background-color: inherit;
+    color: inherit;
+    font: inherit;
+    text-decoration: none;
+}
+
+.account-form label,
+.account-form select {
+    padding: 5px;
+}
+
+.account-form input:focus,
+.account-form select:focus {
+    outline: 4px solid var(--account-form-hover-color);
+    outline-offset: -3px;
+}
+
+.account-form a:not(:disabled),
+.account-form button:not(:disabled) {
+    cursor: pointer;
+}
+
+.account-form a.align-center {
+    text-align: center;
+}
+
+.account-form button.align-left {
+    text-align: left;
+}
+
+.account-form a:not(:disabled):hover,
+.account-form button:not(:disabled):hover {
+    background-color: var(--account-form-hover-color);
+}
+
+.account-form .buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.account-form .buttons button {
+    flex: 1;
+}
+
+/* Specific for preferences form */
+
+.account-form.preferences {
+    width: fit-content;
+    max-width: 750px;
+
+    display: grid;
+    grid-template-columns: max-content max-content max-content;
+    align-items: center;
+    row-gap: 7px;
+    column-gap: 20px;
+}
+
+.account-form.preferences > h3 {
+    grid-column: 1 / -1;
+}
+
+.account-form.preferences > form {
+    display: grid;
+    grid-template-columns: subgrid;
+    align-items: inherit;
+    row-gap: inherit;
+    column-gap: inherit;
+    grid-column: 1 / -1;
+}
+
+.account-form.preferences > form > label {
+    grid-column: 1;
+}
+
+.account-form.preferences > form > select,
+.account-form.preferences > form > input {
+    grid-column: 2;
+}
+
+.account-form.preferences > form > .buttons.same-row {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.account-form.preferences > form > .buttons:not(.same-row) {
+    grid-column: 1 / -1;
+}
+
+.account-form.preferences > form > .email-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.account-form.preferences > form > .email-container > button {
+    width: fit-content;
+}
+
+.account-form.preferences > form:not(.editing) > .edit {
+    visibility: visible;
+}
+
+.account-form.preferences > form:not(.editing) > .action {
+    visibility: hidden;
+}
+
+.account-form.preferences > form.editing > .edit {
+    visibility: hidden;
+}
+
+.account-form.preferences > form.editing > .action {
+    visibility: visible;
+}
+
+.account-form.preferences > form:not(.editing).pw > input {
+    grid-row: 1;
+}
+
+.account-form.preferences > form.editing.pw > input.edit {
+    display: none;
+}

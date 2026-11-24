@@ -1,0 +1,126 @@
+/**
+ * Contact-related forms
+ */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 750px;
+    padding: 10px;
+    border-radius: 20px;
+
+    background-color: var(--contact-form-bg-color);
+    color: var(--contact-form-text-color);
+
+    row-gap: 7px;
+}
+
+.contact-form > h3 {
+    margin: 5px;
+    margin-bottom: 10px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form a,
+.contact-form button,
+.contact-form textarea {
+    padding: 10px;
+    width: 100%;
+
+    border: 1px solid var(--contact-form-border-color);
+    border-radius: 10px;
+
+    background-color: inherit;
+    color: inherit;
+    font: inherit;
+    text-decoration: none;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form label,
+.contact-form select {
+    padding: 5px;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    outline: 4px solid var(--contact-form-hover-color);
+    outline-offset: -3px;
+}
+
+.contact-form a:not(:disabled),
+.contact-form button:not(:disabled) {
+    cursor: pointer;
+}
+
+.contact-form a.align-center {
+    text-align: center;
+}
+
+.contact-form button.align-left {
+    text-align: left;
+}
+
+.contact-form a:not(:disabled):hover,
+.contact-form button:not(:disabled):hover {
+    background-color: var(--contact-form-hover-color);
+}
+
+.contact-form .buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.contact-form .buttons button {
+    flex: 1;
+}
+
+.contact-form .checkbox-div {
+    padding: 5px 0px;
+}
+
+.contact-form .checkbox-div input {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    
+    border: 2px solid var(--contact-form-border-color);
+    border-radius: 5px;
+    
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.contact-form .checkbox-div input:checked {
+    background-color: var(--contact-form-hover-color);
+    border-color: var(--contact-form-hover-color);
+}
+
+.contact-form .checkbox-div input:checked::after {
+    content: "✓";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    color: var(--contact-form-text-color);
+    font-size: 14px;
+}
+
+.contact-form .checkbox-div label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 0;
+    cursor: pointer;
+}
